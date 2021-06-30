@@ -15,7 +15,7 @@ class MiniThread extends Thread {
 
 public class App {
     public static void main(String[] args) throws Exception {
-        int threads = 100000;
+        int threads = 10000;
         int times = 10000;
 
         long tempoInicial = System.currentTimeMillis();

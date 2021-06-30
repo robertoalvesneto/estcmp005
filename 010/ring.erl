@@ -21,6 +21,7 @@ loop(Id, Pid, M) ->
       io:format("~p messages sent in ~p ms~n", [M, Time]),
       exit(self(), ok);
     Index ->
+      erlang:yield(),
       Pid ! Index - 1,
       loop(Id, Pid, M)
   end.
